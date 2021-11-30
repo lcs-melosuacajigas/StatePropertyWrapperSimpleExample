@@ -31,6 +31,13 @@ struct CircleView: View {
             Text("Radius:")
                 .bold()
             
+            Group {
+                HStack {
+                    Spacer()
+                Text("\(radius)")
+                    Spacer()
+            }
+            
             //The syntax of $ says to use the property, radius and BIND it in this control
             Slider(value: $radius,
                    in: 0.0...100.0,
@@ -53,7 +60,7 @@ struct CircleView: View {
             Text("Area:")
                 .bold()
             
-            Text("314.2 square units")
+            Text("\(area) square units")
             
             Spacer()
             
